@@ -7,11 +7,17 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap">
 <link rel="stylesheet" href="css/style.css">
+  <!-- 파비콘 추가 -->
+  <link rel="shortcut icon" type="image/x-icon" href="http://static.wconcept.co.kr/favicon.ico" sizes="16x16">
+
 </head>
-<!-- JavaScript -->
+
 <body>
 <div class="wrapper">
-	<header>
+	<div class="skip_nav">
+		<a href="#section">본문 바로가기</a>
+	</div>
+	<header id="header">
 			<div class="sns">
 				<ul>
 					<li><a href=""><img src="images/social_icon1.gif" alt="facebooksns"></a></li>
@@ -29,7 +35,9 @@
 				</ul>
 			</div>
 	</header>
+	
 	<div class="menu">
+		<nav id="gnb">
 		<nav>
 			<ul>
 				<li>
@@ -81,13 +89,15 @@
 				</li>
 			</ul>
 		</nav>
-	<div class="slider">
+	</div>
+	
+
 		<div class="slider"><img src="images/key1.jpg" alt="key1"></div></div>
 	</div>
-	<section>
+	<section id="section">
 		<div class="banner1">
 			<div class="banner1_1">
-				<a href=""><img src="images/buttero.jpg" alt=""></a>
+				<a href=""><img src="images/buttero.jpg" alt="buttero"></a>
 			</div>
 			<div class="banner1_2">
 				<a href="">
@@ -96,7 +106,7 @@
 							<strong>buttero</strong>
 							<span>101% handcrafted</span>
 						</div>
-						<div class="desc">A fusion of pure rawness
+						<div class="desc">A fusion of pure rawness<br>
 							and elegance</div>
 						<div class="view_more">view more</div>
 					</div>
@@ -105,20 +115,20 @@
 			</div>
 		</div>
 		<div class="banner2">
-			<div class="banner2_1"><a href="">
+			<div class="banner2_1"><a href="bannerimg">
 					<div class="inner">
 						<div class="title">
 							<strong>atclip launching</strong>
 							<span>new launching</span>
 						</div>
-						<div class="desc">Focus on restraint
+						<div class="desc">Focus on restraint<br>
 							and the complex beauty</div>
 						<div class="view_more">view more</div>
 					</div>
 				</a>
 			</div>	
 			<div class="banner2_2">
-			<a href=""><img src="images/atclip.jpg" alt=""></a>	
+			<a href=""><img src="images/atclip.jpg" alt="atclip"></a>	
 			</div>
 		</div>	
 		<div class="banner3">
@@ -162,8 +172,10 @@
 					</a>
 				</div>
 			</div>
+			</a>
 		</div>
-	</section>
+	</div>`
+</section>
 	<footer>
 		<div class="adress">
 			㈜더블유컨셉코리아 대표자 : 황재익 서울특별시 강남구 테헤란로14길 16, 5층
