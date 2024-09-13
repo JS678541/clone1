@@ -39,7 +39,49 @@
 			$(".slider li").removeClass("active");
 			$(".slider li").eq(sliderN).addClass("active");
 		});
+
+		/*접근성*/
+		$("nav > ul > li").hover(
+        function() {
+            $("nav").addClass("active");
+        },
+        function() {
+            $("nav").removeClass("active");
+        }
+    );
+
+
+	$("nav > ul > li > a").focusin(function() {
+        if($(this).parent().index() == 0) {
+            $("nav").addClass("active");
+        }
+        $(this).parent().addClass("active");
+    });
+
+    let total = $("nav > ul > li").length;
+	
+
+	$("nav li li:last-child a").focusout(function(){
+		
+		// console.log($(this).parent().parent().parent().index());
+	
+		 if($(this).parent().parent().parent().index() == total - 1) {
+            $("nav").removeClass("active");
+        }
+
+	
+		
+		$(this).parent().parent().parent().removeClass("active");
+    });
+
+		
 	});
+
+
+
+
+
+
 	</script>
   <!-- 파비콘 추가 -->
   <link rel="shortcut icon" type="image/x-icon" href="http://static.wconcept.co.kr/favicon.ico" sizes="16x16">

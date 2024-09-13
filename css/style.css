@@ -69,6 +69,7 @@ nav {
 	position: relative;
 	min-width: 1020px; /**/
 	height: 55px;
+	z-index: 1000;
 }
 
 nav > ul {/*1depth*/
@@ -105,9 +106,14 @@ nav .sub a:hover {
    color: #000;
 }
 
-nav:hover > ul {
+
+nav.active > ul {
 	height: 185px; 
 }
+
+/*nav:hover > ul {
+	height: 185px; 
+}*/
 nav > ul > li {  
 	position: relative;
 }
