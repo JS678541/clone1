@@ -7,8 +7,42 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap">
 <link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	$(function(){
+		let sliderN = 0;
+	
+		$(".slider li").eq(sliderN).addClass("active");
+	
+		$(".slider .right_arrow").click(function(e) {
+			e.preventDefault();
+			if(sliderN < 3){
+				sliderN=sliderN+1;
+			}
+			else{
+				sliderN=0;
+			}
+
+			$(".slider li").removeClass("active");
+			$(".slider li").eq(sliderN).addClass("active");
+		});
+		
+		$(".slider .left_arrow").click(function(e) {
+			e.preventDefault();
+			if(sliderN > 0){
+				sliderN=sliderN-1;
+			}
+			else{
+				sliderN=3;
+			}
+
+			$(".slider li").removeClass("active");
+			$(".slider li").eq(sliderN).addClass("active");
+		});
+	});
+	</script>
   <!-- 파비콘 추가 -->
-  <link rel="shortcut icon" type="image/x-icon" href="https://static.wconcept.co.kr/favicon.ico" sizes="16x16">
+  <link rel="shortcut icon" type="image/x-icon" href="http://static.wconcept.co.kr/favicon.ico" sizes="16x16">
 
 </head>
 
@@ -29,7 +63,7 @@
 			<div class="logo"><h1><a href=""><img src="images/logo.png" alt=""></a></h1></div>
 			<div class="utils">
 				<ul>
-					<li><a href="">LOGIN</a></li>`
+					<li><a href="">LOGIN</a></li>
 					<li><a href="">JOIN</a></li>
 					<li><a href="">개인정보취급방침</a></li>
 				</ul>
@@ -92,7 +126,17 @@
 	</div>
 	
 
-		<div class="slider"><img src="images/key1.jpg" alt="key1"></div></div>
+	<div class="slider">
+		<ul>
+			<li><a href="" title="key1"><img src="images/key1.jpg" alt="key1"></a></li>
+			<li><a href="" title="key2"><img src="images/key2.jpg" alt="key2"></a></li>
+			<li><a href="" title="key3"><img src="images/key3.jpg" alt="key3"></a></li>
+			<li><a href="" title="key4"><img src="images/key4.jpg" alt="key4"></a></li>
+		</ul>
+		<div class="direction">
+			<a href="" class="left_arrow"><img src="images/btn_left.png" alt="btn_left"></a>
+			<a href="" class="right_arrow"><img src="images/btn_right.png" alt="btn_right"></a>
+		</div>
 	</div>
 	<section id="section">
 		<div class="banner1">
